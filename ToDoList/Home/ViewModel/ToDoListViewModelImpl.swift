@@ -31,12 +31,10 @@ class ToDoListViewModelImpl: ToDoListViewModel {
     
     func addItem(value: String) {
         self.listRepository.addUpdateToList(item: value)
-        self.loadListSubject.onNext(())
     }
     
     func deleteItem(id: Int) {
         self.listRepository.deleteFromList(itemId: id)
-        self.loadListSubject.onNext(())
     }
 }
 
